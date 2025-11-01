@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nainvai 💖</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg,#f9c5d1,#ffe0f0);
+      display:flex;align-items:center;justify-content:center;
+      height:100vh;text-align:center;color:#333;
+      flex-direction:column;transition:background 1s ease;
+    }
+    .page{display:none;animation:fadeIn 1s ease;}
+    .active{display:block;}
+    @keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+    button{
+      margin-top:20px;padding:10px 20px;
+      background:#ff4f8b;color:#fff;
+      border:none;border-radius:25px;
+      font-size:1rem;cursor:pointer;
+      box-shadow:0 4px 8px rgba(0,0,0,0.2);
+    }
+    h2{font-size:1.6rem;margin-bottom:10px;}
+    p{font-size:1.1rem;}
+  </style>
+</head>
+<body>
+  <audio id="bgMusic" autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2023/03/15/audio_73f6ee51b9.mp3?filename=romantic-piano-14474.mp3" type="audio/mpeg">
+  </audio>
+
+  <div id="page1" class="page active">
+    <h2>Hey Nainvai 💖</h2>
+    <p>Kya bataun… jab se tu mili hai, smile permanent ho gayi meri 😅</p>
+    <button onclick="nextPage(2)">Turn the page 👉</button>
+  </div>
+
+  <div id="page2" class="page">
+    <h2>School ma jab pheli bar tumne Smile di thi</h2>
+    <p>Us din se ni bhool paya tumhe 💫</p>
+    <button onclick="nextPage(3)">Turn the page 👉</button>
+  </div>
+
+  <div id="page3" class="page">
+    <h2>Har rat sapne ma ati ha 💞</h2>
+    <p>Tu simple rahe ya stylish, sab kuch perfect lagta hai 😌</p>
+    <button onclick="nextPage(4)">Turn the page 👉</button>
+  </div>
+
+  <div id="page4" class="page">
+    <h2>Pata hai tumko?</h2>
+    <p>Kabhi kabhi bas tumhare message ka wait karta rehta hu 💌</p>
+    <button onclick="nextPage(5)">Turn the page 👉</button>
+  </div>
+
+  <div id="page5" class="page">
+    <h2>Ma kabhi kha ni paya </h2>
+    <p>par aaj bol raha hu {I LOVE YOU🥰} ❤️</p>
+    <button onclick="nextPage(6)">Turn the page 👉</button>
+  </div>
+
+  <div id="page6" class="page">
+    <h2>🎂 Happy Birthday Nainvai in advance 💖</h2>
+    <p>Tera smile kabhi fade na ho... aur har wish puri ho 🌸</p>
+    <p>—From Mohit 💌</p>
+  </div>
+
+  <script>
+    function nextPage(n){
+      const pages=document.querySelectorAll('.page');
+      pages.forEach(p=>p.classList.remove('active'));
+      document.getElementById('page'+n).classList.add('active');
+    }
+  </script>
+</body>
+</html>
